@@ -1,11 +1,26 @@
 <div data-aos="zoom-in" id="projects-component">
-    <h1>Projects</h1>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim labore odit. Placeat aliquid, mollitia laudantium unde molestias dolorem, sint ut illum, quisquam tempora porro dignissimos blanditiis iste! Recusandae, perspiciatis.</h4>
+    <div id="projects">
+        <h1>Projects</h1>
+        <div id="checkbox-container">
+            <div class="checkbox-parent">
+                <h4>FrontEnd</h4>
+                <div class="checkbox-div checkbox-clicked" id="frontend" (click)="onCheckboxClick($event)"></div>
+            </div>
+            <div class="checkbox-parent">
+                <h4>FullStack</h4>
+                <div class="checkbox-div checkbox-clicked" id="fullstack" (click)="onCheckboxClick($event)"></div>
+            </div>
+            <div class="checkbox-parent">
+                <h4>BackEnd</h4>
+                <div class="checkbox-div checkbox-clicked" id="backend" (click)="onCheckboxClick($event)"></div>
+            </div>
+        </div>
+    </div>
     
     <div id="project-container">
-        <div *ngFor="let i of projectArray" class="project" (click)="onProjectClick(i)">
+        <div *ngFor="let i of filteredProjectArray" class="project">
             <figure>
-                <img width="200px" src="assets/project-photo.svg">
+                <img src="{{i.image}}">
                 <span class="{{'color-for-'+i.role}}" id="project-role">{{i.role}}</span>
             </figure>
             <div id="project-info">
@@ -16,14 +31,11 @@
                     </p>
                 </div>
                 <div id="repo-live-button">
-                    <button>Live Server</button>
-                    <button>Repository</button>
+                    <button *ngIf="i.live"><a href="{{i.live}}" target="_blank">Live Server</a></button>
+                    <button *ngIf="i.repository"><a href="{{i.repository}}" target="_blank">Repository</a></button>
+                    <button *ngIf="!i.live && !i.repository">In Development</button>
                 </div>
             </div>
         </div>
-        <!-- <div *ngIf="openModal" id="project-modal">
-            <h1>{{currentProject?.name}}</h1>
-            <img width="500px" src="assets/project-photo.svg">
-        </div> -->
     </div>
 </div>

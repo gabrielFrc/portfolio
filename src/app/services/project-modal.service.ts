@@ -9,9 +9,10 @@ export class ProjectModalService {
   name : String;
   techs : String[] = [];
   role : String;
+  image : String = "assets/DefaultWork.png";
   repository : String | null = null;
   live : String | null = null;
-  constructor(id: Number, name : String, @Inject(String) techs : String[], role : String, repository? : String, live? : String) {
+  constructor(id: Number, name : String, @Inject(String) techs : String[], role : String, image? : String, repository? : String, live? : String) {
     this.id = id;
     this.name = name;
     this.techs = techs;
@@ -20,9 +21,11 @@ export class ProjectModalService {
       this.repository = repository;
     if(live)
       this.live = live;
+    if(image)
+      this.image = image;
   }
 
   getValues(){
-    return {id: this.id, name: this.name, techs: this.techs, role: this.role};
+    return {id: this.id, name: this.name, techs: this.techs, role: this.role, image: this.image};
   }
 }
