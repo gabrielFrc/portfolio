@@ -3,12 +3,14 @@
     --color2: #DCF763;
     --color3: #606D5D;
     --color4: #141414;
+
+    --space-on-section: 100px;
 }
 
 *{
     margin: 0;
 }
 
-h1, h2, h3, h4, p, button, input, a{
+h1, h2, h3, h4, h5, p, button, input, a, span{
     font-family: "Epilogue";
 }

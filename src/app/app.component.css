@@ -1,13 +1,14 @@
 nav{
     position: fixed;
     padding: 5px 0;
+    width: 100%;
     top: 0;
     left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.05);
+    z-index: 99;
 }
 
 nav > *{
@@ -35,9 +36,9 @@ h3{
 #apresentation{
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 130px;
     flex-direction: row;
-    margin: 150px 0 0 0;
+    margin: var(--space-on-section) 0 0 0;
 }
 #apresentation > div{
     max-width: 500px;
@@ -63,7 +64,8 @@ h1{
 }
 
 hr{
-    margin: 30px 10vw;
+    margin: var(--space-on-section) 8vw;
+    border: solid 1.5px rgba(0, 0, 0, 0.3);
 }
 
 #about-me{
@@ -75,10 +77,10 @@ hr{
     background-color: var(--color4);
     padding: 30px;
     border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 #about-me h2, #about-me h4{
     color: var(--color1);
-    width: 400px;
 }
 #about-me h2{
     margin-bottom: 30px;
@@ -93,7 +95,7 @@ hr{
 footer{
     background-color: var(--color4);
     padding: 50px 0;
-    margin-top: 50px;
+    margin-top: var(--space-on-section);
     text-align: center;
 }
 
@@ -105,13 +107,16 @@ a span{
     color: rgb(73, 73, 243);
 }
 
-@media screen and (max-width: 940px){
+@media screen and (max-width: 1030px){
     #apresentation{
         flex-direction: column;
         gap: 0;
     }
     #apresentation figure{
         margin: 40px auto;
+    }
+    #apresentation figure > img{
+        width: 80vw;
     }
     #apresentation > div{
         margin: auto;
@@ -120,8 +125,22 @@ a span{
     #about-me{
         flex-direction: column;
         gap: 50px;
+        margin: 0 5vw;
+    }
+    #about-me h2, #about-me h4{
+        width: auto;
     }
     #about-me img{
         margin: auto;
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #apresentation figure > img{
+        width: 100vw;
+    }
+    nav > *{
+        /* display: none; */
     }
 }

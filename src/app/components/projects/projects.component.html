@@ -1,0 +1,29 @@
+<div data-aos="zoom-in" id="projects-component">
+    <h1>Projects</h1>
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim labore odit. Placeat aliquid, mollitia laudantium unde molestias dolorem, sint ut illum, quisquam tempora porro dignissimos blanditiis iste! Recusandae, perspiciatis.</h4>
+    
+    <div id="project-container">
+        <div *ngFor="let i of projectArray" class="project" (click)="onProjectClick(i)">
+            <figure>
+                <img width="200px" src="assets/project-photo.svg">
+                <span class="{{'color-for-'+i.role}}" id="project-role">{{i.role}}</span>
+            </figure>
+            <div id="project-info">
+                <h4>{{i.name}}</h4>
+                <div id="techs">
+                    <p *ngFor="let skills of i.techs">
+                        {{skills}}
+                    </p>
+                </div>
+                <div id="repo-live-button">
+                    <button>Live Server</button>
+                    <button>Repository</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div *ngIf="openModal" id="project-modal">
+            <h1>{{currentProject?.name}}</h1>
+            <img width="500px" src="assets/project-photo.svg">
+        </div> -->
+    </div>
+</div>
