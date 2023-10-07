@@ -17,7 +17,7 @@
         </div>
     </div>
     
-    <div id="project-container">
+    <div id="project-container" *ngIf="!checkIfHasCheckboxes()">
         <div *ngFor="let i of filteredProjectArray" class="project">
             <figure>
                 <img src="{{i.image}}">
@@ -37,5 +37,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        <h2 *ngIf="checkIfHasCheckboxes()">No project found...</h2>
     </div>
 </div>

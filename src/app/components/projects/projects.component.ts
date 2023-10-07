@@ -32,6 +32,11 @@ export class ProjectsComponent implements OnInit{
     });
   }
 
+  checkIfHasCheckboxes(): Boolean{
+    let checkboxes = document.querySelectorAll(".checkbox-clicked");
+    return checkboxes.length <= 0;
+  }
+
   ngOnInit(): void {
     let id = 0;
 

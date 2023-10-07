@@ -11,6 +11,10 @@ nav{
     z-index: 99;
 }
 
+nav #mobile-menu{
+    display: none;
+}
+
 nav > *{
     margin: 0 40px;
 }
@@ -25,6 +29,10 @@ nav > div > button{
 }
 nav > div > button:hover{
     font-size: 1.05em;
+}
+
+#burger-menu-icon{
+    display: none;
 }
 
 h3{
@@ -140,7 +148,33 @@ a span{
     #apresentation figure > img{
         width: 100vw;
     }
-    nav > *{
-        /* display: none; */
+}
+
+@media screen and (max-width: 500px) {
+    nav > #pc-menu {
+        display: none;
+    }
+
+    nav > #mobile-menu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        right: 0;
+        top: 50px;
+        height: max-content;
+        margin: 0;
+        background-color: white;
+    }
+    nav > #mobile-menu button{
+        padding: 40px 15px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    }
+    nav > #mobile-menu button:first-child{
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    #burger-menu-icon{
+        display: inline;
     }
 }

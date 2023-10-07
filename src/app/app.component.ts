@@ -9,6 +9,18 @@ import * as Aos from 'aos';
 export class AppComponent implements OnInit{
   title = 'Portfolio';
 
+  showSubCategories = false;
+
+  setSubCategories(){
+    this.showSubCategories = !this.showSubCategories;
+  }
+
+  scrollToElement(element : String){
+    const e = document.querySelector(`#${element}`)
+    if(e)
+      e.scrollIntoView({behavior: 'smooth', block: 'center'})
+  }
+
   ngOnInit(): void {
     Aos.init();
   }

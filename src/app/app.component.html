@@ -1,9 +1,18 @@
 <main>
   <nav>
     <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/30/000000/source-code.png" alt="source-code"/>
-    <div>
-      <button>About</button>
-      <button>Work</button>
+    <div id="pc-menu">
+      <button (click)="scrollToElement('about-me')">About</button>
+      <button (click)="scrollToElement('projects')">Work</button>
+      <button>Contact Me</button>
+    </div>
+    <img id="burger-menu-icon" 
+    width="30" 
+    src="assets/burger-menu.svg"
+    (click)="setSubCategories()">
+    <div *ngIf="showSubCategories" id="mobile-menu">
+      <button (click)="scrollToElement('about-me')">About</button>
+      <button (click)="scrollToElement('projects')">Work</button>
       <button>Contact Me</button>
     </div>
   </nav>
@@ -40,7 +49,7 @@
   </section>
 </main>
 
-<app-projects/>
+<app-projects />
 
 <footer>
   <a href="https://icons8.com">Icons from <span>Icons8</span></a>
