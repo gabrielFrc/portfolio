@@ -10,6 +10,8 @@ export class ProjectsComponent implements OnInit{
   projectArray : ProjectModalService[] = [];
   filteredProjectArray : ProjectModalService[] = [];
 
+  HasProjects : Boolean = false;
+
   onCheckboxClick(event : Event){
     const checkbox = event.target as HTMLElement;
 
@@ -29,12 +31,20 @@ export class ProjectsComponent implements OnInit{
       })
 
       this.filteredProjectArray.push(...localArray);
+      this.HasProjects = this.filteredProjectArray.length <= 0
     });
   }
 
   checkIfHasCheckboxes(): Boolean{
-    let checkboxes = document.querySelectorAll(".checkbox-clicked");
+    const checkboxes = document.querySelectorAll(".checkbox-clicked");
+
     return checkboxes.length <= 0;
+  }
+
+  checkIfHasProjects(): Boolean{
+    const projects = document.querySelectorAll('.project');
+
+    return projects.length > 0;
   }
 
   ngOnInit(): void {
@@ -42,15 +52,11 @@ export class ProjectsComponent implements OnInit{
 
     this.projectArray.push(new ProjectModalService(id, 'Slice & Spice', ['ReactJS', 'AOS', 'ReduxJS'], 'FrontEnd', "assets/Work1.png", 'https://github.com/gabrielFrc/PizzaWebReact', 'https://gabrielfrc.github.io/PizzaWebReact/'));
     id++;
-    this.projectArray.push(new ProjectModalService(id, 'Projexto Y', ['React', 'React'], 'FullStack'));
-    id++;
-    this.projectArray.push(new ProjectModalService(id, 'Projexto ABC', ['React'], 'FullStack'));
-    id++;
-    this.projectArray.push(new ProjectModalService(id, 'Projexto XYZ', ['React'], 'BackEnd'));
-    id++;
-    this.projectArray.push(new ProjectModalService(id, 'Projexto BackBack', ['React'], 'BackEnd'));
+    this.projectArray.push(new ProjectModalService(id, 'Portfolio', ['Angular', 'AOS'], 'FrontEnd', "assets/Work2.png", "https://github.com/gabrielFrc/portfolio", " "));
     id++;
 
     this.filteredProjectArray = this.projectArray;
+
+    this.HasProjects = this.checkIfHasProjects();
   }
 }

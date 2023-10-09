@@ -1,0 +1,25 @@
+#skills-container{
+    width: 70vw;
+    margin: auto;
+    text-align: center;
+}
+
+.skills-domain{
+    margin-top: 30px;
+}
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.skills img{
+    filter: opacity(.05) drop-shadow(0 0 0 var(--color2)) drop-shadow(0 0 0 var(--color2)) drop-shadow(0 0 0 var(--color2)) drop-shadow(0 0 0 var(--color2)) drop-shadow(0 0 0 var(--color2)) drop-shadow(0 0 0 var(--color2));
+}
+.skills img:hover{
+    opacity: .6;
+    transition: all .5s;
+}

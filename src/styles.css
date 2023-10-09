@@ -14,3 +14,7 @@
 h1, h2, h3, h4, h5, p, button, input, a, span{
     font-family: "Epilogue";
 }
+
+h1{
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
