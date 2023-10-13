@@ -2,18 +2,14 @@
   <nav>
     <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/30/000000/source-code.png" alt="source-code"/>
     <div id="pc-menu">
-      <button (click)="scrollToElement('about-me')">About</button>
-      <button (click)="scrollToElement('projects')">Work</button>
-      <button>Contact Me</button>
+      <button *ngFor="let i of buttonsList" (click)="scrollToElement(i.elementId)">{{i.buttonName}}</button>
     </div>
     <img id="burger-menu-icon" 
     width="30" 
     src="assets/burger-menu.svg"
     (click)="setSubCategories()">
     <div *ngIf="showSubCategories" id="mobile-menu">
-      <button (click)="scrollToElement('about-me')">About</button>
-      <button (click)="scrollToElement('projects')">Work</button>
-      <button>Contact Me</button>
+      <button *ngFor="let i of buttonsList" (click)="scrollToElement(i.elementId)">{{i.buttonName}}</button>
     </div>
   </nav>
 

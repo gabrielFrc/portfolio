@@ -23,3 +23,46 @@
     opacity: .6;
     transition: all .5s;
 }
+
+h1{
+    margin: 40px 0;
+    color: var(--color1)
+}
+
+#skills-container{
+    background-color: var(--color4);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+h5{
+    font-size: .8rem;
+}
+
+h3, h5{
+    color: var(--color1);
+}
+
+.skill-block{
+    width: 100px;
+    min-height: 110px;
+    max-height: max-content;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.skill-block h5{
+    margin-top: 5px;
+    word-wrap: break-word;
+    /* display: none; */
+    scale: 0;
+}
+.skill-block:hover > h5{
+    /* display: block; */
+    scale: 1;
+    transition: all .5s;
+}
