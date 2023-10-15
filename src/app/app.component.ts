@@ -30,11 +30,15 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    document.getElementById("submit-email")?.addEventListener("click", function(event){
+      event.preventDefault()
+    });
+
     Aos.init();
 
     this.buttonsList.push({buttonName: "About", elementId: 'about-me'})
     this.buttonsList.push({buttonName: "Work", elementId: 'projects'})
     this.buttonsList.push({buttonName: "Skills", elementId: 'skills-container'})
-    this.buttonsList.push({buttonName: "Contact", elementId: 'skills-container'})
+    this.buttonsList.push({buttonName: "Contact", elementId: 'contact-info'})
   }
 }

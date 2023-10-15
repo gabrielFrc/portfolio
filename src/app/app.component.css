@@ -44,7 +44,7 @@ h3{
 #apresentation{
     display: flex;
     justify-content: center;
-    gap: 130px;
+    gap: 15vw;
     flex-direction: row;
     margin: var(--space-on-section) 0 0 0;
 }
@@ -100,11 +100,48 @@ hr{
     color: var(--color2);
 }
 
+#contact-info{
+    display: flex;
+    gap: 10vw;
+
+    margin: var(--space-on-section) 20vw 0 20vw;
+}
+#contact-info form{
+    margin-top: 40px;
+}
+#contact-info form input{
+    padding: 15px 60px 15px 15px;
+    margin: 5px 0;
+    border: none;
+    background-color: var(--color1);
+}
+
+#contact-info form #submit-email{
+    padding: 25px 35px;
+    background-color: var(--color4);
+    color: var(--color1);
+}
+
+#contact-text{
+    display: flex;
+    flex-direction: column;
+}
+#contact-text > *{
+    margin: 10px 0;
+}
+
 footer{
     background-color: var(--color4);
-    padding: 50px 0;
+    padding: 20px 0;
     margin-top: var(--space-on-section);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+footer a{
+    font-size: .9em;
 }
 
 a{
@@ -141,6 +178,16 @@ a span{
     #about-me img{
         margin: auto;
 
+    }
+
+    #contact-info{
+        flex-direction: column;
+        gap: 30px;
+        margin: var(--space-on-section) 10vw 0 10vw;
+    }
+    #contact-info form{
+        width: min-content;
+        margin: 0 auto;
     }
 }
 
