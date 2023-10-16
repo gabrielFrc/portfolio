@@ -36,9 +36,9 @@ export class AppComponent implements OnInit{
 
     Aos.init();
 
-    this.buttonsList.push({buttonName: "About", elementId: 'about-me'})
-    this.buttonsList.push({buttonName: "Work", elementId: 'projects'})
-    this.buttonsList.push({buttonName: "Skills", elementId: 'skills-container'})
-    this.buttonsList.push({buttonName: "Contact", elementId: 'contact-info'})
+    this.buttonsList.push({buttonName: "Sobre mim", elementId: 'about-me'})
+    this.buttonsList.push({buttonName: "Projetos", elementId: 'projects'})
+    this.buttonsList.push({buttonName: "Habilidades", elementId: 'skills-container'})
+    this.buttonsList.push({buttonName: "Contato", elementId: 'contact-info'})
   }
 }

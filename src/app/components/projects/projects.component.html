@@ -1,6 +1,6 @@
 <div data-aos="zoom-in" id="projects-component">
     <div id="projects">
-        <h1>Projects</h1>
+        <h1>Projetos</h1>
         <div id="checkbox-container">
             <div class="checkbox-parent">
                 <h4>FrontEnd</h4>
@@ -32,13 +32,13 @@
                 </div>
                 <div id="repo-live-button">
                     <button *ngIf="i.live"><a href="{{i.live}}" target="_blank">Live Server</a></button>
-                    <button *ngIf="i.repository"><a href="{{i.repository}}" target="_blank">Repository</a></button>
-                    <button *ngIf="!i.live && !i.repository">In Development</button>
+                    <button *ngIf="i.repository"><a href="{{i.repository}}" target="_blank">Repositório</a></button>
+                    <button *ngIf="!i.live && !i.repository">Em desenvolvimento</button>
                 </div>
             </div>
         </div>
     </div>
     <div>
-        <h2 *ngIf="HasProjects">No project found...</h2>
+        <h2 *ngIf="HasProjects">Sem projetos...</h2>
     </div>
 </div>

@@ -96,8 +96,14 @@ hr{
 #about-me h4{
     margin-bottom: 15px;
 }
-#about-me span{
+#about-me .title-profile{
+    color:rgb(228, 228, 148);
+}
+#about-me .emphasis{
     color: var(--color2);
+}
+#contact-text .emphasis{
+    color: rgb(219, 223, 4);
 }
 
 #contact-info{
@@ -165,6 +171,7 @@ a span{
     }
     #apresentation > div{
         margin: auto;
+        width: 90vw;
     }
 
     #about-me{
@@ -188,6 +195,11 @@ a span{
     #contact-info form{
         width: min-content;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-info form #submit-email{
+        margin: 5px auto;
     }
 }
 
@@ -195,9 +207,7 @@ a span{
     #apresentation figure > img{
         width: 100vw;
     }
-}
 
-@media screen and (max-width: 500px) {
     nav > #pc-menu {
         display: none;
     }

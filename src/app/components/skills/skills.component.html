@@ -1,7 +1,7 @@
-<div id="skills-container">
-    <h1>Techs and Skills</h1>
+<div id="skills-container" data-aos="zoom-in">
+    <h1>Tecnologias e Habilidades</h1>
     <div class="skills-domain" id="better-domain">
-        <h3>Better domain</h3>
+        <h3>Melhor domínio</h3>
         <div class="skills">
             <div class="skill-block" *ngFor="let i of domainSkills">
                 <img width="60" src="{{i.link}}" alt="{{i.alt}}">
@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="skills-domain" id="used-sometimes">
-        <h3>Used sometimes</h3>
+        <h3>Utilizado algumas vezes</h3>
         <div class="skills">
             <div class="skill-block" *ngFor="let i of noDomainSkills">
                 <img width="60" src="{{i.link}}" alt="{{i.alt}}">
