@@ -110,27 +110,41 @@ hr{
     display: flex;
     gap: 10vw;
 
-    margin: var(--space-on-section) 20vw 0 20vw;
-}
-#contact-info form{
-    margin-top: 40px;
-}
-#contact-info form input{
-    padding: 15px 60px 15px 15px;
-    margin: 5px 0;
-    border: none;
+    padding: 60px;
+    margin: var(--space-on-section) 15vw 0 15vw;
+    border-radius: 20px;
+
     background-color: var(--color1);
 }
 
-#contact-info form #submit-email{
-    padding: 25px 35px;
+#contact-info > a{
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    height: min-content;
+    width: max-content;
+    padding: 35px 60px;
+    border-radius: 50px;
+    margin: 50px auto 0 auto;
     background-color: var(--color4);
     color: var(--color1);
+}
+#contact-info > a span{
+    display: inline-block;
+    width: 30px;
+}
+#contact-info > a img{
+    filter: invert(100%);
+    width: 100%;
+    height: 100%;
+    margin-bottom: -5px;
+    margin-left: -20px;
 }
 
 #contact-text{
     display: flex;
     flex-direction: column;
+    width: 30vw;
 }
 #contact-text > *{
     margin: 10px 0;
@@ -200,6 +214,10 @@ a span{
     }
     #contact-info form #submit-email{
         margin: 5px auto;
+    }
+
+    #contact-text{
+        width: auto;
     }
 }
 
