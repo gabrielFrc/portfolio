@@ -50,9 +50,11 @@ export class ProjectsComponent implements OnInit{
   ngOnInit(): void {
     let id = 0;
 
-    this.projectArray.push(new ProjectModalService(id, 'Slice & Spice', ['ReactJS', 'AOS', 'ReduxJS'], 'FrontEnd', "assets/Work1.png", 'https://github.com/gabrielFrc/PizzaWebReact', 'https://gabrielfrc.github.io/PizzaWebReact/'));
+    this.projectArray.push(new ProjectModalService(id, 'Slice & Spice', ['ReactJS', 'AOS', 'ReduxJS'], 'FrontEnd', 'Uma simulação de um site de pizzaria real.', "assets/Work1.png", 'https://github.com/gabrielFrc/PizzaWebReact', 'https://gabrielfrc.github.io/PizzaWebReact/'));
     id++;
-    this.projectArray.push(new ProjectModalService(id, 'Portfolio', ['Angular', 'AOS'], 'FrontEnd', "assets/Work2.png", "https://github.com/gabrielFrc/portfolio", " "));
+    this.projectArray.push(new ProjectModalService(id, 'Portfolio', ['Angular', 'AOS'], 'FrontEnd', 'Meu portfolio pessoal (O que você está visitando agora).', "assets/Work2.png", "https://github.com/gabrielFrc/portfolio", " "));
+    id++;
+    this.projectArray.push(new ProjectModalService(id, 'Fla Gato', ['ReactJS', 'Next.JS'], 'FrontEnd', 'Um website feito para uma ONG de gatos.',  "assets/Work3.png", null, "https://flagato.vercel.app"));
     id++;
 
     this.filteredProjectArray = this.projectArray;
